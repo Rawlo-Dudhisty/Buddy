@@ -1,6 +1,6 @@
 # StudyAI — Full-Stack EdTech App
 
-AI-powered study platform built with **Next.js 15**, **Prisma**, **PostgreSQL**, **NextAuth v5**, and **Anthropic Claude**. Deploy to Vercel in minutes.
+AI-powered study platform built with **Next.js 15**, **Prisma**, **PostgreSQL**, **NextAuth v5**, and **Gemini Claude**. Deploy to Vercel in minutes.
 
 ---
 
@@ -28,9 +28,9 @@ AI-powered study platform built with **Next.js 15**, **Prisma**, **PostgreSQL**,
    - **Pooled** (for `DATABASE_URL`): contains `?pgbouncer=true`
    - **Direct** (for `DIRECT_URL`): no pgbouncer param
 
-### Step 2 — Get an Anthropic API Key
+### Step 2 — Get an Gemini API Key
 
-1. Go to [console.anthropic.com](https://console.anthropic.com)
+1. Go to [console.Gemini.com](https://console.Gemini.com)
 2. API Keys → Create Key → copy it
 
 ### Step 3 — Push to GitHub
@@ -53,7 +53,7 @@ DATABASE_URL        = postgresql://USER:PASS@HOST/studyai?sslmode=require&pgboun
 DIRECT_URL          = postgresql://USER:PASS@HOST/studyai?sslmode=require
 AUTH_SECRET         = <run: openssl rand -base64 32>
 NEXTAUTH_URL        = https://your-app.vercel.app
-ANTHROPIC_API_KEY   = sk-ant-...
+Gemini_API_KEY   = sk-ant-...
 ```
 
 3. Click **Deploy**
@@ -83,7 +83,7 @@ npm install
 
 # 2. Set up environment
 cp .env.example .env.local
-# Fill in your DATABASE_URL, DIRECT_URL, AUTH_SECRET, ANTHROPIC_API_KEY
+# Fill in your DATABASE_URL, DIRECT_URL, AUTH_SECRET, Gemini_API_KEY
 
 # 3. Push DB schema
 npx prisma db push
@@ -177,7 +177,7 @@ studyai/
 - **Database**: PostgreSQL via Neon (serverless)
 - **ORM**: Prisma 5
 - **Auth**: NextAuth v5 (JWT strategy)
-- **AI**: Anthropic Claude (claude-sonnet-4)
+- **AI**: Gemini Claude (claude-sonnet-4)
 - **Styling**: CSS-in-JS (inline styles, CSS variables)
 - **Deployment**: Vercel
 
